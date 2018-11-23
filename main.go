@@ -29,6 +29,7 @@ func main() {
 	sort := flag.String("sort", "asc", "--sort={asc | desc}")
 	order := flag.String("order", "id", "--order={field_name}")
 	action := flag.String("action", "", "--action={action name}")
+	optionsType := flag.String("type", "", "--type={option type}")
 	flag.Parse()
 
 	// Get the current user.
@@ -56,7 +57,7 @@ func main() {
 
 	// Spicer's Blog Trades
 	case "spicers-blog-trades":
-		actions.DoSpicersBlogTrades(*start, *end, *order, *sort)
+		actions.DoSpicersBlogTrades(*start, *end, *order, *sort, *optionsType)
 
 	// // Do Auth
 	// case "auth":
