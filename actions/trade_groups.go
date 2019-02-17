@@ -119,7 +119,7 @@ func DoSpicersBlogTrades(start string, end string, order string, sort string, op
 		closedAmount := ((row.Proceeds * -1.00) / float64(row.Positions[0].OrgQty)) / 100
 
 		// Figure out strong tag (make red if negative)
-		strong := `<strong color: #D64561;>`
+		strong := `<strong class="red-text">`
 
 		if percent > 0 {
 			strong = `<strong>`
